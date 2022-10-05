@@ -19,15 +19,21 @@ changeColor.addEventListener("click", async () => {
 // The body of this function will be executed as a content script inside the
 // current page
 function setPageBackgroundColor() {
-  const text = document.querySelectorAll('h3')
-  const word = 'havoc';
+  // const text = document.querySelectorAll('h3')
+  const word = 'News';
 
   if (document.body.textContent.includes(word)) {
-    document.body.innerHTML = document.body.innerHTML.replace(/havoc/g, 'sniffari');
+    document.body.innerHTML = document.body.innerHTML.replace(/Output/g, 'sniffari');
     console.log('found and changed');
-  } else {
-    console.log('not here...');
-  }
+  } 
+
+  // const text2 = document.querySelectorAll('h3')
+  const word2 = 'to';
+
+  if (document.body.textContent.includes(word2)) {
+    document.body.innerHTML = document.body.innerHTML.replace(/to/g, 'or');
+    console.log('found and changed');
+  } 
   chrome.storage.sync.get("color", ({ color }) => {
     document.body.style.backgroundColor = color;
   });
