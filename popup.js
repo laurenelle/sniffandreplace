@@ -19,15 +19,18 @@ changeColor.addEventListener("click", async () => {
 // The body of this function will be executed as a content script inside the
 // current page
 function setPageBackgroundColor() {
-  // const text = document.querySelectorAll('h3')
-  const word = 'News';
 
-  if (document.body.textContent.includes(word)) {
-    document.body.innerHTML = document.body.innerHTML.replace(/Output/g, 'sniffari');
-    console.log('found and changed');
-  } 
 
-  // const text2 = document.querySelectorAll('h3')
+  document.body.innerHTML = document.body.innerHTML.replace(/News/g, 'sniffari');
+  document.body.innerHTML = document.body.innerHTML.replace(/Elections/g, 'Enrichment');
+  document.body.innerHTML = document.body.innerHTML.replace(/Politics/g, 'Premack');
+  // const word = 'News';
+
+  // if (document.body.textContent.includes(word)) {
+  //   document.body.innerHTML = document.body.innerHTML.replace(/News/g, 'sniffari');
+  //   console.log('found and changed');
+  // } 
+
   const word2 = 'to';
 
   if (document.body.textContent.includes(word2)) {

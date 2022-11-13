@@ -8,6 +8,9 @@
   },
   "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
   "action": {
-  	"default_popup": "popup.html"
+  	"default_popup": "popup.html",
+    "default_icon": {
+      "16": "16px_favicon.png"
+    }
   }
 }
